@@ -4,7 +4,6 @@ MAINTAINER Javier Junquera <javier.junquera.sanchez@gmail.com># this is the orig
 
 # declare the working directory by environment variable
 ENV WORKDIR /ntop
-
 # set working directory
 WORKDIR ${WORKDIR}
 
@@ -66,4 +65,4 @@ RUN ["chmod", "+x", "start.sh"]
 EXPOSE 3000
 
 # declare when run the docker, which sciprt need to call
-ENTRYPOINT ${WORKDIR}"/start.sh"
+ENTRYPOINT ["/ntop/start.sh"]
